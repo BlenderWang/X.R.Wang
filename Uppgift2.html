@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inlämnigsuppgift2</title>
+    <style>
+        body {
+            background: #eee;
+            font-size: 14px;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 80%;
+        }
+        p {
+            color: #3e3e3e;
+            font-size: 16px;
+        }
+        p em {
+            color: #008080;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2><em>Inlämningsuppgift 2 &#x1F923;</em></h2>
+    <p><em>Namn: </em>Xiaorui Wang</p>
+    <p>**********************************</p>
+    <h2>Teori</h2>
+
+    <h4>1. Vad är DVCS? Förklara syften med ett sådant system?</h4>
+    <p>Syftet med DVCS(Distributed Version Control System) är att hålla reda på olika versioner av filer. Ett populär sätt att använda sådant system är användering av "repository" som mellanhand mellan datorer och servrar. Repository innehåller ändrade versioner och mjukvarusystemet kontrollerar regelbundet med repository för att hålla konsistens.</p>
+
+    <h4>2. Vad är en funktion? Förklara och skriv några exempel.</h4>
+    <p>Funktion(function) är ett kodstycke som kan anrops av en variable eller andra kod och av sig själv. När det anrops måste argument passeras in i funktionen som input. En funktion är ett objekt i JavaScript.</p>
+    <p><em>
+        function foo(param1, param2) {
+            console.log(`Param 1 + Param 2 är ${param1 + param2}.`);
+        }<br>
+        foo(3, 5);  //Param 1 + Param 2 är 8.
+    </em></p>
+
+    <h4>3. Hur kan en funktion ta emot värden?</h4>
+    <p>Värden som tas emot av en funktion kallas för argumenter när funktionen anropas. I det sista exemplet finns två parametrar som heter param1 och param2. Funktionen kommer att console.log med resultatet av tillägg av param1 och param2. När funktionen anrops passar man två argument, 3 och 5. Därför blir resultatet 8.</p>
+
+    <h4>4. Hur kan en funktion returnera värden?</h4>
+    <p>En funktion returnerar värden genom att använda nyckelorden 'return', t ex:</p>
+    <p><em>
+        function calc(num1, num2) {
+            return num1 + num2;
+        }<br>
+        calc(2, 4); //6
+    </em></p>
+
+    <h4>5. Hur kan man få en funktion att returnera flera värden samtidigt?</h4>
+    <p>En funktion kan returnera en array som håller flera värden.</p>
+    <p><em>
+        const someValues = function(value1, value2, value3) {<br>
+            value1 = "Value One";<br>
+            value2 = "Value Two";<br>
+            value3 = "Value Three";<br>
+            return [value1, value2, value3];<br>
+        };
+    </em></p>
+
+    <h4>6. Vad är en anonym funktion?</h4>
+    <p>Anonym fuktioner deklaras dynamiskt vid runtime och ges inget namn som vanliga funktioner. Att deklara en anonym funktion använder man nyckelord 'function':</p>
+    <p><em>
+        const anonymousFoo = <b>function</b>() {
+            document.write('I'm alive!);
+        }
+    </em></p>
+
+    <h4>7. Vad är objekt i JavaScript? Förklara.</h4>
+    <p>Objekt är en datatyp i JavaScript. Som ett riktigt objekt i livet beter ett JavaScript objekt sig på likdana sätt. Objekt  i JavaScript har egenskaper och metoder:</p>
+    <p><em>
+        //"animal" är ett JavaScript objekt och har tre egenskaper samt en metod
+        <br>
+        const animal = {
+            name: 'cat',  //egenskap<br>
+            age: 4,     //egenskap<br>
+            color: 'orange',  //egenskap<br>
+            sayHi: function() {<br>
+                console.log('Meow Meow');   //metod<br>
+            }<br>
+        };
+    </em></p>
+
+    <h4>8. Förklara skillnaden mellan "Literal Notation" och "Constructor Notation".</h4>
+    <p>I JavaScript finns två sätt att skapa ett objekt: 'literal notation' och 'constructor notation'.</p>
+    <p>Literal Notation ser ut så här:</p>
+    <p><em>
+        let cat = {};
+    </em></p>
+
+    <p>Constructor Notation ser ut så här:</p>
+    <p><em>
+        function Dog() {};
+    </em></p>
+
+    <h4>9. Vad är egenskaper? Skriv några exempel.</h4>
+    <p>Egenskaper är värde som tilldelas till ett objekt i JavaScript. Ett objekt har ofta en eller flera egenskaper som tillsammans beskriver objektet.</p>
+    <p><em>
+        const animal = {<br>
+            name: 'Hector',<br>
+            age: 6,<br>
+            length: '20cm'<br>
+        };
+    </em></p>
+    <p><em>
+         function Animal() {<br>
+             this.name: 'Genius';<br>
+             this.age: 3;<br>
+             this.length: 31cm;<br>
+         };
+    </em></p>
+
+    <h4>10. Vad är metoder? Skriv några exempel.</h4>
+    <p>Metoder är egentligen funktioner som lever i ett objekt och beskriver hur objekt beter sig.</p>
+    <p><em>
+        const dog = {<br>
+            sayHi: function() {<br>
+                console.log('Woof Woof!');<br>
+            }<br>
+        };
+    </em></p>
+    <p><em>
+        function Dog() {<br>
+            this.sayHi() {<br>
+                console.log('Woof!');<br>
+            };<br>
+        };
+    </em></p>
+
+    <p>**********************************</p>
+    <h2>Programmering</h2>
+
+    <h4>Uppgift 1</h4>
+    <p>- Skapa ett program som läser in två godtyckliga tal via inmatningsfält (prompt).<br>
+        - Lagra dessa tal i två olika variabler, tal1 och tal2.<br>
+        - Visa produkten av dessa tal i en alert-ruta (multiplicera dessa tal och visa resultatet).<br>
+        <em>
+            const tal1 = prompt('Ange ett nummer:');<br>
+            const tal2 = prompt('Ange ett annat nummer:');<br>
+
+            alert(`Resultatet av multiplikation är ${tal1 * tal2}`);
+        </em><br>
+        - Vad får du om man matar in text, eller ingenting alls?<br>
+        <em>Att få NaN när man matar in en string och få 0 om ingentine anges</em><br>
+        - Visa divisionen (tal1/tal2) i en ny alert-ruta.<br>
+        <em>alert(`Resultatet av division är ${tal1 / tal2}`);</em><br>
+        - Vad får du om man matar in nollor?<br>
+        <em>NaN</em><br>
+        - Vad får du om tal1 är större än 0 och tal2 är 0?<br>
+        <em>Resultat blir 'ingentine' om tal1 är större än 0 och tal2 är 0.</em></p>
+
+        <h4>Uppgift 2</h4>
+        <p>- Du har fått ett uppdrag att skapa ett program för att beräkna arean och omkretsen för en valfri rektangel.<br>
+            - Vid körning frågar programmet efter bredd och höjd.<br>
+            - Skapa en funktion som beräknar rektangelns area.<br>
+            - Skapa en funktion som beräknar rektangelns omkrets.<br>
+            - Anropa dina funktioner och visa ett meddelande som visar rektangelns area och omkrets. Testa olika rektanglar.</p>
+        <p><em>
+            const width = prompt('Hur bredd är rektanglen?');<br>
+            const height = prompt('Hur hög är rektanglen?');<br>
+
+            function area() {   <br>
+                document.write(`Rektanglens area är ${width * height} kvadratmeter.`);<br>
+            }<br>
+
+            function circumference() {  <br>
+                document.write(`Rektanglens omkretsen är ${width * 2 + height * 2} meter.`);    <br>
+            }<br>
+
+            area();<br>
+            circumference();
+        </em></p>
+
+        <h4>Uppgift 3</h4>
+        <p>
+            - Skriv ett program som läser in en temperatur uttryckt i grader Fahrenheit.<br>
+            - Programmet översätter temperaturen till grader Celsius.<br>
+            - Använd följande formel T°C = (5/9) x (T°F − 32)
+        </p>
+        <p><em>
+            const tempFahrenheit = prompt('Ange idags temperatur i Fahrenheit');<br>
+
+            function toCelsius() {  <br>
+                const celcius = Math.round((5 / 9) * (tempFahrenheit - 32));    <br>
+                document.write(`Temperaturen idag är ${celcius} grader Celcius`);<br>
+            }<br>
+
+            toCelsius();
+        </em></p>
+
+        <h4>Uppgift 4</h4>
+        <p>
+            - Skapa ett objekt som beskriver en hiss.<br>
+            - Hissen har en enda egenskap, plan som lagrar aktuell våning.<br>
+            - Hissen har två metoder goTo () och where()<br>
+            - Metoden goTo() accepterar en parameter som sätter aktuell våning.<br>
+            - Vid anrop, t.ex. goTo(5) visar metoden i konsolen texten: ”Hissen åker till plan 5”.<br>
+            - Metoden where() returnerar våningsnumret (en siffra).<br>
+            - Vid anrop visar metoden i konsolen texten: ”Hissen är på plan 5 just nu”.
+        </p>
+        <p><em>
+            const elevator = {  <br>
+                level: 0,   <br>
+                goTo: function(level) { <br>
+                    this.level = level; <br>
+                    console.log(`Hissen åker till plan ${level}`);  <br>
+                },  <br>
+                where: function(level) {    <br>
+                    return this.level;  <br>
+                }   <br>
+            };<br>
+
+            elevator.goTo(5);<br>
+            elevator.where();<br>
+            console.log(`Hissen är på plan ${elevator.level} just nu`);
+        </em></p>
+    </div>
+
+    <!--
+    <script src="Uppgift2.js"></script>
+    -->
+
+</body>
+</html>

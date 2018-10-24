@@ -37,7 +37,7 @@ console.log(jane.epost);
 
 //Övning 2
 function hypotenusa(a, b) {
-    const c = a*a + b*b;
+    const c = Math.sqrt(a*a + b*b);
     return c;
 }
 

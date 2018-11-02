@@ -68,14 +68,14 @@
             const data = randomDice();
             //print out the frequency of the occurance of each digit
             //use the reduce() to count instances of values in an object
-            const countOccurance = data.reduce(function (total, item) {
+            const countOccurance = data.reduce(function (total, item) { //first param is a callback fn as accumulator
                 if (item in total) {    //if item is found in total
                     total[item]++; //increament and add one [item] to total
                 } else {    //first time finding [item]
                     total[item] = 1;   //mark it as 1
                 }
                 return total;   //after looping 1000 times, return and store total
-            }, {}); //initial value of data.reduce() is empty
+            }, {}); //initial/current value of data.reduce() is empty
             return countOccurance; //return and store the end value
         }
 
